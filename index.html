@@ -7,11 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
-Keerthi Korrapati | Senior DevOps Engineer
+Keerthi Korrapati | Senior Analyst - DevOps & Cloud Engineering
 </title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 
 
 <style>
@@ -26,48 +26,13 @@ box-sizing:border-box;
 
 body{
 
-background:#050816;
-color:white;
+background:#020617;
+
+color:#fff;
 
 font-family:Inter,sans-serif;
 
-overflow-x:hidden;
-
-}
-
-
-/* background animation */
-
-body::before{
-
-content:"";
-
-position:fixed;
-
-width:600px;
-height:600px;
-
-background:#0284c7;
-
-filter:blur(180px);
-
-opacity:.25;
-
-top:-200px;
-left:-200px;
-
-z-index:-1;
-
-}
-
-
-
-/* COMMON */
-
-
-section{
-
-padding:80px 8%;
+scroll-behavior:smooth;
 
 }
 
@@ -80,9 +45,47 @@ font-family:"Space Grotesk";
 
 
 
+.container{
+
+width:90%;
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+
+section{
+
+padding:90px 0;
+
+}
+
+
+
+.glass{
+
+background:
+
+rgba(15,23,42,.75);
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+}
+
+
+
 .gradient{
 
 background:
+
 linear-gradient(
 90deg,
 #38bdf8,
@@ -97,74 +100,88 @@ color:transparent;
 
 
 
-.glass{
 
-background:
-rgba(255,255,255,.07);
-
-border:
-
-1px solid rgba(255,255,255,.12);
+/******** NAVBAR ********/
 
 
-backdrop-filter:blur(15px);
+nav{
 
+position:fixed;
 
-border-radius:20px;
+top:0;
 
+width:100%;
+
+padding:20px;
+
+background:#020617cc;
+
+backdrop-filter:blur(20px);
+
+z-index:100;
 
 }
 
 
 
-/* HERO */
+.nav{
+
+display:flex;
+
+justify-content:space-between;
+
+}
+
+
+
+.logo{
+
+font-weight:700;
+
+font-size:22px;
+
+}
+
+
+
+.nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:20px;
+
+}
+
+
+
+/******** HERO ********/
 
 
 .hero{
 
-height:100vh;
+min-height:100vh;
 
 display:flex;
 
-justify-content:center;
+align-items:center;
+
+}
+
+
+
+.hero-grid{
+
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
 
 align-items:center;
 
-text-align:center;
-
-}
-
-
-
-.profile{
-
-width:180px;
-
-height:180px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:5px solid #38bdf8;
-
-
-animation:
-
-float 4s infinite;
-
-}
-
-
-
-@keyframes float{
-
-
-50%{
-
-transform:translateY(-20px);
-
-}
 
 }
 
@@ -174,17 +191,17 @@ transform:translateY(-20px);
 
 font-size:70px;
 
-margin-top:30px;
+line-height:1.1;
 
 }
 
 
 
-.hero h2{
+.role{
 
-font-size:30px;
+font-size:32px;
 
-margin:20px;
+margin:20px 0;
 
 }
 
@@ -192,34 +209,83 @@ margin:20px;
 
 .hero p{
 
-max-width:700px;
-
 color:#94a3b8;
 
 font-size:18px;
 
+line-height:1.7;
+
 }
 
 
 
-button{
+.buttons{
+
+margin-top:35px;
+
+}
 
 
-margin-top:30px;
 
-padding:15px 30px;
+.btn{
+
+
+padding:15px 28px;
 
 border-radius:12px;
 
-border:none;
+background:#38bdf8;
 
-background:#06b6d4;
-
-color:white;
+color:black;
 
 font-weight:bold;
 
-cursor:pointer;
+text-decoration:none;
+
+margin-right:15px;
+
+
+}
+
+
+
+.outline{
+
+background:none;
+
+color:white;
+
+border:1px solid #38bdf8;
+
+}
+
+
+
+.photo-box{
+
+position:relative;
+
+}
+
+
+
+.photo-box img{
+
+
+width:380px;
+
+height:380px;
+
+object-fit:cover;
+
+border-radius:40px;
+
+border:3px solid #38bdf8;
+
+
+box-shadow:
+
+0 0 50px #38bdf866;
 
 
 }
@@ -227,7 +293,38 @@ cursor:pointer;
 
 
 
-/* ABOUT */
+.badges{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+margin-top:30px;
+
+
+}
+
+
+.badge{
+
+
+padding:12px 20px;
+
+border-radius:20px;
+
+background:#0f172a;
+
+border:1px solid #334155;
+
+
+}
+
+
+
+
+/******** STATS ********/
 
 
 .stats{
@@ -235,53 +332,42 @@ cursor:pointer;
 
 display:grid;
 
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(4,1fr);
 
 gap:20px;
 
-margin-top:40px;
+}
 
+
+
+.stat{
+
+padding:35px;
+
+text-align:center;
 
 }
 
 
 
-.card{
+.stat h2{
 
-padding:30px;
-
-}
-
-
-
-.card h3{
-
-font-size:35px;
+font-size:45px;
 
 }
 
 
 
-.card p{
-
-color:#94a3b8;
-
-}
-
-
-
-/* EXPERIENCE */
+/******** EXPERIENCE ********/
 
 
 .timeline{
 
+margin-top:40px;
 
 display:grid;
 
-gap:25px;
-
-margin-top:40px;
-
+gap:30px;
 
 }
 
@@ -289,26 +375,17 @@ margin-top:40px;
 
 .exp{
 
-padding:30px;
-
-transition:.4s;
-
+padding:35px;
 
 }
+
 
 
 .exp:hover{
 
+transform:translateY(-8px);
 
-transform:translateY(-10px);
-
-}
-
-
-
-.exp h3{
-
-font-size:28px;
+transition:.3s;
 
 }
 
@@ -322,21 +399,71 @@ color:#22c55e;
 
 
 
+.tech{
 
-/* SKILLS */
+color:#38bdf8;
+
+font-family:"JetBrains Mono";
+
+}
+
+
+
+/******** ARCHITECTURE ********/
+
+
+.arch{
+
+text-align:center;
+
+padding:50px;
+
+font-family:"JetBrains Mono";
+
+}
+
+
+
+.node{
+
+display:inline-block;
+
+padding:18px;
+
+margin:15px;
+
+background:#0f172a;
+
+border-radius:15px;
+
+border:1px solid #38bdf8;
+
+
+}
+
+
+
+
+.arrow{
+
+color:#22c55e;
+
+font-size:25px;
+
+}
+
+
+
+/******** SKILLS ********/
 
 
 .skills{
 
-
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(5,1fr);
 
 gap:20px;
-
-margin-top:40px;
-
 
 }
 
@@ -344,36 +471,19 @@ margin-top:40px;
 
 .skill{
 
-
 padding:25px;
 
 text-align:center;
 
-transition:.3s;
-
-
-}
-
-
-
-.skill:hover{
-
-
-transform:scale(1.1);
-
-background:#0f172a;
-
-
 }
 
 
 
 
-/* PROJECTS */
+/******** PROJECTS ********/
 
 
 .projects{
-
 
 display:grid;
 
@@ -388,26 +498,14 @@ gap:25px;
 
 .project{
 
-
-padding:30px;
-
-}
-
-
-
-.project:hover{
-
-
-transform:translateY(-10px);
-
-transition:.4s;
-
+padding:35px;
 
 }
 
 
 
-/* CONTACT */
+
+/******** FOOTER ********/
 
 
 footer{
@@ -423,25 +521,37 @@ color:#94a3b8;
 
 
 
-/* MOBILE */
+
+@media(max-width:900px){
 
 
-@media(max-width:700px){
-
-
-.hero h1{
-
-font-size:42px;
-
-}
-
-
+.hero-grid,
 .stats,
-.projects{
+.projects,
+.skills{
 
 grid-template-columns:1fr;
 
 }
+
+
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+
+
+.photo-box img{
+
+width:280px;
+
+height:280px;
+
+}
+
 
 
 }
@@ -457,45 +567,158 @@ grid-template-columns:1fr;
 
 
 
+<nav>
+
+<div class="container nav">
+
+
+<div class="logo">
+KK
+</div>
+
+
+<div>
+
+<a href="#experience">
+Experience
+</a>
+
+<a href="#projects">
+Projects
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</nav>
+
+
+
+
 <!-- HERO -->
 
+
 <section class="hero">
+
+
+<div class="container hero-grid">
+
 
 
 <div>
 
 
-<img src="IMG_20260327_134341.jpg"
-class="profile">
-
-
 <h1>
-Keerthi Korrapati
+
+KEERTHI
+KORRAPATI
+
 </h1>
 
 
-<h2 class="gradient">
 
-Senior DevOps Engineer
+<div class="role gradient">
 
-</h2>
+Senior Analyst
+
+</div>
+
+
+
+<h3>
+
+DevOps & Cloud Engineering
+
+</h3>
 
 
 
 <p>
 
-Building scalable cloud platforms,
-automating CI/CD pipelines and
-engineering reliable Kubernetes systems.
+I design and automate cloud-native platforms,
+CI/CD pipelines and Kubernetes-based solutions.
+
+Experienced in AWS infrastructure,
+GitOps workflows and production automation.
 
 </p>
 
 
-<button>
 
-View Projects
 
-</button>
+<div class="buttons">
+
+<a class="btn"
+href="Keerthi_Korrapati_Resume.pdf">
+
+Download Resume
+
+</a>
+
+
+<a class="btn outline"
+href="#contact">
+
+Contact
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="badges">
+
+
+<div class="badge">
+AWS
+</div>
+
+
+<div class="badge">
+Kubernetes
+</div>
+
+
+<div class="badge">
+Terraform
+</div>
+
+
+<div class="badge">
+GitOps
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="photo-box">
+
+
+<img src="IMG_20260327_134341.jpg">
+
+
+</div>
+
 
 
 </div>
@@ -506,76 +729,62 @@ View Projects
 
 
 
-<!-- ABOUT -->
+
+
+
+<!-- STATS -->
 
 
 <section>
 
 
-<h2>
-About Me
+<div class="container stats">
+
+
+<div class="glass stat">
+
+<h2 class="gradient">
+4+
 </h2>
 
+Experience
 
-<div class="glass card">
-
-
-<p>
-
-DevOps Engineer with experience in AWS,
-Kubernetes, Terraform, Jenkins and GitOps.
-
-Focused on cloud automation,
-continuous delivery and scalable
-infrastructure.
-
-</p>
+</div>
 
 
 
-<div class="stats">
+<div class="glass stat">
+
+<h2 class="gradient">
+100+
+</h2>
+
+Applications
+
+</div>
 
 
-<div class="glass card">
 
-<h3 class="gradient">
+<div class="glass stat">
+
+<h2 class="gradient">
 99.9%
-</h3>
+</h2>
 
-<p>
-Deployment Success
-</p>
+Deployment
 
 </div>
 
 
 
-<div class="glass card">
 
-<h3 class="gradient">
+<div class="glass stat">
+
+<h2 class="gradient">
 40%
-</h3>
+</h2>
 
-<p>
-Faster Provisioning
-</p>
-
-</div>
-
-
-
-<div class="glass card">
-
-<h3 class="gradient">
-20%
-</h3>
-
-<p>
-Cloud Cost Optimization
-</p>
-
-</div>
-
+Automation
 
 </div>
 
@@ -584,7 +793,6 @@ Cloud Cost Optimization
 
 
 </section>
-
 
 
 
@@ -593,16 +801,20 @@ Cloud Cost Optimization
 <!-- EXPERIENCE -->
 
 
-<section>
+<section id="experience">
+
+
+<div class="container">
 
 
 <h2>
-Experience
+Professional Experience
 </h2>
 
 
 
 <div class="timeline">
+
 
 
 <div class="glass exp">
@@ -625,12 +837,23 @@ Capgemini
 
 <p>
 
-AWS | Kubernetes | Cloud Automation
+Cloud automation,
+Kubernetes platform engineering,
+CI/CD and GitOps implementation.
 
 </p>
 
 
+<p class="tech">
+
+AWS | EKS | Terraform | ArgoCD
+
+</p>
+
+
+
 </div>
+
 
 
 
@@ -650,18 +873,26 @@ Capgemini
 
 
 <p class="year">
-
 2022 - 2025
-
 </p>
 
 
 <p>
 
-Jenkins | Terraform | Docker |
-CI/CD | Monitoring
+Built Jenkins pipelines,
+Docker automation,
+Terraform infrastructure
+and monitoring solutions.
 
 </p>
+
+
+<p class="tech">
+
+Jenkins | Docker | AWS | Kubernetes
+
+</p>
+
 
 
 </div>
@@ -675,29 +906,119 @@ CI/CD | Monitoring
 
 <h3>
 Internship Trainee
-
 </h3>
 
 
 <p>
 Capgemini
-
 </p>
 
 
 <p class="year">
-
 2022
-
 </p>
+
 
 
 <p>
 
-Spring Boot | REST APIs |
-AWS EC2 | Docker
+Developed Spring Boot application,
+containerized using Docker,
+deployed on AWS EC2.
 
 </p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ARCHITECTURE -->
+
+
+<section>
+
+
+<div class="container">
+
+
+<h2>
+DevOps Architecture
+</h2>
+
+
+
+<div class="glass arch">
+
+
+<div class="node">
+Developer
+</div>
+
+
+<span class="arrow">
+↓
+</span>
+
+
+<div class="node">
+GitHub
+</div>
+
+
+<span class="arrow">
+↓
+</span>
+
+
+<div class="node">
+Jenkins CI/CD
+</div>
+
+
+<span class="arrow">
+↓
+</span>
+
+
+<div class="node">
+Docker + ECR
+</div>
+
+
+<span class="arrow">
+↓
+</span>
+
+
+<div class="node">
+AWS EKS
+</div>
+
+
+<span class="arrow">
+↓
+</span>
+
+
+<div class="node">
+ArgoCD
+</div>
+
 
 
 </div>
@@ -712,15 +1033,20 @@ AWS EC2 | Docker
 
 
 
+
 <!-- SKILLS -->
 
 
 <section>
 
 
+<div class="container">
+
+
 <h2>
-DevOps Stack
+Technology Stack
 </h2>
+
 
 
 <div class="skills">
@@ -730,17 +1056,21 @@ DevOps Stack
 AWS
 </div>
 
+
 <div class="glass skill">
 Kubernetes
 </div>
+
 
 <div class="glass skill">
 Docker
 </div>
 
+
 <div class="glass skill">
 Terraform
 </div>
+
 
 <div class="glass skill">
 Jenkins
@@ -775,7 +1105,11 @@ Git
 </div>
 
 
+</div>
+
+
 </section>
+
 
 
 
@@ -784,30 +1118,34 @@ Git
 <!-- PROJECTS -->
 
 
-<section>
+<section id="projects">
+
+
+<div class="container">
 
 
 <h2>
-Projects
+Featured Projects
 </h2>
 
 
 <div class="projects">
 
 
+
 <div class="glass project">
 
+
 <h3>
-
 Enterprise Developer Platform
-
 </h3>
 
 
 <p>
 
-AWS EKS + Kubernetes +
-CI/CD Automation
+AWS EKS,
+Kubernetes,
+CI/CD automation
 
 </p>
 
@@ -822,8 +1160,7 @@ CI/CD Automation
 
 
 <h3>
-
-Infrastructure Automation
+Cloud Infrastructure Automation
 
 </h3>
 
@@ -846,7 +1183,6 @@ Terraform based AWS provisioning
 
 
 <h3>
-
 GitOps Deployment Platform
 
 </h3>
@@ -854,7 +1190,7 @@ GitOps Deployment Platform
 
 <p>
 
-ArgoCD + Kubernetes deployments
+ArgoCD based automated deployments
 
 </p>
 
@@ -864,45 +1200,6 @@ ArgoCD + Kubernetes deployments
 
 
 </div>
-
-
-</section>
-
-
-
-
-
-
-<!-- CERTIFICATIONS -->
-
-
-<section>
-
-
-<h2>
-Certifications
-</h2>
-
-
-<div class="glass card">
-
-
-<p>
-
-AWS Certified Cloud Practitioner
-
-</p>
-
-
-<br>
-
-
-<p>
-
-🏆 Rising Star Award - Capgemini
-
-</p>
-
 
 
 </div>
@@ -913,6 +1210,9 @@ AWS Certified Cloud Practitioner
 
 
 
+
+
+<section id="contact">
 
 
 <footer>
@@ -924,22 +1224,21 @@ Let's Connect
 
 
 <p>
-
 korrapatikeerthi24@gmail.com
-
 </p>
 
 
 <p>
-
-LinkedIn:
-linkedin.com/in/korrapati-keerthi
-
+LinkedIn: linkedin.com/in/korrapati-keerthi
 </p>
 
 
-
 </footer>
+
+
+</section>
+
+
 
 
 
