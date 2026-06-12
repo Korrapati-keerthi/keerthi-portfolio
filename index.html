@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Keerthi Korrapati | Senior DevOps Engineer
+</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+background:#050816;
+color:white;
+
+font-family:Inter,sans-serif;
+
+overflow-x:hidden;
+
+}
+
+
+/* background animation */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:600px;
+height:600px;
+
+background:#0284c7;
+
+filter:blur(180px);
+
+opacity:.25;
+
+top:-200px;
+left:-200px;
+
+z-index:-1;
+
+}
+
+
+
+/* COMMON */
+
+
+section{
+
+padding:80px 8%;
+
+}
+
+
+h1,h2,h3{
+
+font-family:"Space Grotesk";
+
+}
+
+
+
+.gradient{
+
+background:
+linear-gradient(
+90deg,
+#38bdf8,
+#22c55e
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.glass{
+
+background:
+rgba(255,255,255,.07);
+
+border:
+
+1px solid rgba(255,255,255,.12);
+
+
+backdrop-filter:blur(15px);
+
+
+border-radius:20px;
+
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+
+
+.profile{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid #38bdf8;
+
+
+animation:
+
+float 4s infinite;
+
+}
+
+
+
+@keyframes float{
+
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+
+
+.hero h1{
+
+font-size:70px;
+
+margin-top:30px;
+
+}
+
+
+
+.hero h2{
+
+font-size:30px;
+
+margin:20px;
+
+}
+
+
+
+.hero p{
+
+max-width:700px;
+
+color:#94a3b8;
+
+font-size:18px;
+
+}
+
+
+
+button{
+
+
+margin-top:30px;
+
+padding:15px 30px;
+
+border-radius:12px;
+
+border:none;
+
+background:#06b6d4;
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+
+}
+
+
+
+
+/* ABOUT */
+
+
+.stats{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+margin-top:40px;
+
+
+}
+
+
+
+.card{
+
+padding:30px;
+
+}
+
+
+
+.card h3{
+
+font-size:35px;
+
+}
+
+
+
+.card p{
+
+color:#94a3b8;
+
+}
+
+
+
+/* EXPERIENCE */
+
+
+.timeline{
+
+
+display:grid;
+
+gap:25px;
+
+margin-top:40px;
+
+
+}
+
+
+
+.exp{
+
+padding:30px;
+
+transition:.4s;
+
+
+}
+
+
+.exp:hover{
+
+
+transform:translateY(-10px);
+
+}
+
+
+
+.exp h3{
+
+font-size:28px;
+
+}
+
+
+
+.year{
+
+color:#22c55e;
+
+}
+
+
+
+
+/* SKILLS */
+
+
+.skills{
+
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+gap:20px;
+
+margin-top:40px;
+
+
+}
+
+
+
+.skill{
+
+
+padding:25px;
+
+text-align:center;
+
+transition:.3s;
+
+
+}
+
+
+
+.skill:hover{
+
+
+transform:scale(1.1);
+
+background:#0f172a;
+
+
+}
+
+
+
+
+/* PROJECTS */
+
+
+.projects{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+
+}
+
+
+
+.project{
+
+
+padding:30px;
+
+}
+
+
+
+.project:hover{
+
+
+transform:translateY(-10px);
+
+transition:.4s;
+
+
+}
+
+
+
+/* CONTACT */
+
+
+footer{
+
+padding:80px;
+
+text-align:center;
+
+color:#94a3b8;
+
+}
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+
+.stats,
+.projects{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+
+<div>
+
+
+<img src="profile.jpg"
+class="profile">
+
+
+<h1>
+Keerthi Korrapati
+</h1>
+
+
+<h2 class="gradient">
+
+Senior DevOps Engineer
+
+</h2>
+
+
+
+<p>
+
+Building scalable cloud platforms,
+automating CI/CD pipelines and
+engineering reliable Kubernetes systems.
+
+</p>
+
+
+<button>
+
+View Projects
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- ABOUT -->
+
+
+<section>
+
+
+<h2>
+About Me
+</h2>
+
+
+<div class="glass card">
+
+
+<p>
+
+DevOps Engineer with experience in AWS,
+Kubernetes, Terraform, Jenkins and GitOps.
+
+Focused on cloud automation,
+continuous delivery and scalable
+infrastructure.
+
+</p>
+
+
+
+<div class="stats">
+
+
+<div class="glass card">
+
+<h3 class="gradient">
+99.9%
+</h3>
+
+<p>
+Deployment Success
+</p>
+
+</div>
+
+
+
+<div class="glass card">
+
+<h3 class="gradient">
+40%
+</h3>
+
+<p>
+Faster Provisioning
+</p>
+
+</div>
+
+
+
+<div class="glass card">
+
+<h3 class="gradient">
+20%
+</h3>
+
+<p>
+Cloud Cost Optimization
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- EXPERIENCE -->
+
+
+<section>
+
+
+<h2>
+Experience
+</h2>
+
+
+
+<div class="timeline">
+
+
+<div class="glass exp">
+
+
+<h3>
+Senior Analyst
+</h3>
+
+
+<p>
+Capgemini
+</p>
+
+
+<p class="year">
+2025 - Present
+</p>
+
+
+<p>
+
+AWS | Kubernetes | Cloud Automation
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="glass exp">
+
+
+<h3>
+Analyst
+</h3>
+
+
+<p>
+Capgemini
+</p>
+
+
+<p class="year">
+
+2022 - 2025
+
+</p>
+
+
+<p>
+
+Jenkins | Terraform | Docker |
+CI/CD | Monitoring
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="glass exp">
+
+
+<h3>
+Internship Trainee
+
+</h3>
+
+
+<p>
+Capgemini
+
+</p>
+
+
+<p class="year">
+
+2022
+
+</p>
+
+
+<p>
+
+Spring Boot | REST APIs |
+AWS EC2 | Docker
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- SKILLS -->
+
+
+<section>
+
+
+<h2>
+DevOps Stack
+</h2>
+
+
+<div class="skills">
+
+
+<div class="glass skill">
+AWS
+</div>
+
+<div class="glass skill">
+Kubernetes
+</div>
+
+<div class="glass skill">
+Docker
+</div>
+
+<div class="glass skill">
+Terraform
+</div>
+
+<div class="glass skill">
+Jenkins
+</div>
+
+
+<div class="glass skill">
+ArgoCD
+</div>
+
+
+<div class="glass skill">
+Prometheus
+</div>
+
+
+<div class="glass skill">
+Grafana
+</div>
+
+
+<div class="glass skill">
+Linux
+</div>
+
+
+<div class="glass skill">
+Git
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- PROJECTS -->
+
+
+<section>
+
+
+<h2>
+Projects
+</h2>
+
+
+<div class="projects">
+
+
+<div class="glass project">
+
+<h3>
+
+Enterprise Developer Platform
+
+</h3>
+
+
+<p>
+
+AWS EKS + Kubernetes +
+CI/CD Automation
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="glass project">
+
+
+<h3>
+
+Infrastructure Automation
+
+</h3>
+
+
+<p>
+
+Terraform based AWS provisioning
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="glass project">
+
+
+<h3>
+
+GitOps Deployment Platform
+
+</h3>
+
+
+<p>
+
+ArgoCD + Kubernetes deployments
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- CERTIFICATIONS -->
+
+
+<section>
+
+
+<h2>
+Certifications
+</h2>
+
+
+<div class="glass card">
+
+
+<p>
+
+AWS Certified Cloud Practitioner
+
+</p>
+
+
+<br>
+
+
+<p>
+
+🏆 Rising Star Award - Capgemini
+
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+Let's Connect
+</h2>
+
+
+<p>
+
+korrapatikeerthi24@gmail.com
+
+</p>
+
+
+<p>
+
+LinkedIn:
+linkedin.com/in/korrapati-keerthi
+
+</p>
+
+
+
+</footer>
+
+
+
+</body>
+
+</html>
